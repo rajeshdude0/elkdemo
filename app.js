@@ -4,15 +4,13 @@ var bodyParser = require('body-parser');
 var router = express.Router();
 var fs = require("fs");
 var request = require('request');
+var http = require('http');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-var server = app.listen(3000, function(){
-     var host = server.address().address;
-     var port = server.address().port;
-     console.log('Server listening at http://'+host+':'+port);
-});
+
 
 app.use(express.static(__dirname + '/public'));
 app.use('/', router);
@@ -59,3 +57,9 @@ router.get('/getlogmetrics', function(req, res){
 
 
 
+var server = http.createServer(app);
+server.listen(3000,"127.0.0.1", function(){
+     var host = server.address().address;
+     var port = server.address().port;
+     console.log('Server listening at http://'+host+':'+port);
+});
