@@ -1,0 +1,16 @@
+{
+  "name": "elk-demo",
+  "version": "1.0.0",
+  "description": "A small demo app for ELK stack",
+  "main": "index.js",
+  "scripts": {
+    "start":"node app.js"
+  },
+  "author": "rajdude0",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
