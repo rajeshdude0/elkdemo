@@ -20,13 +20,9 @@ router.post('/init', function(req, res){
     var options = {};
     options.flag = 'wx';
     console.log(req.body.browserid);
-    fs.writeFile('./logs/'+req.body.browserid+'.log', '', options, function(err){
-        if( err && err.code=='EEXIST'){
-            console.log("File already existed!");
-            return res.status(200).send();
-        }
+    
         return res.status(200).send();
-    })
+    
 })
 router.post('/send', function(req, res){   
       
