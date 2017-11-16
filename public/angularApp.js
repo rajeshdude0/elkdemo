@@ -87,6 +87,14 @@ app.controller('postController', ['$scope','elkservice', function($scope, post){
       }, 1000);
     });
 
+    $(document).ready(function(){
+    $('iframe').each(function(index, frame){
+        console.log(frame);
+        var oldsrc = frame.src;
+        var newsrc = oldsrc.replace("b2859f114225bf4dc7b366c2e5710f0d",browserFingerPrint);
+        frame.src = newsrc;
+    })
+})
 
     
 }]);
