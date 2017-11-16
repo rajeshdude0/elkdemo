@@ -54,7 +54,7 @@ router.get('/getlogmetrics', function(req, res){
 
 
 var server = http.createServer(app);
-server.listen(3000,"127.0.0.1", function(){
+server.listen(process.env.PORT || 3000, function(){
      var host = server.address().address;
      var port = server.address().port;
      console.log('Server listening at http://'+host+':'+port);
