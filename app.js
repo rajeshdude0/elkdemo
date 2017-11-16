@@ -27,7 +27,7 @@ router.post('/init', function(req, res){
 router.post('/send', function(req, res){   
       
     request({
-        url : 'http://elkdemo.tk:31311/elkdemo/'+ req.body.browserid,
+        url : 'http://elkdemo.ml:31311/elkdemo/'+ req.body.browserid,
         method: "PUT",
         json:{'data':req.body}
     }, function(error, response, body ){
@@ -39,7 +39,7 @@ router.post('/send', function(req, res){
 
 router.get('/getlogmetrics', function(req, res){
    request({
-       url: 'http://elkdemo.tk:9600/_node/stats/pipeline',
+       url: 'http://elkdemo.ml:9600/_node/stats/pipeline',
        method:'GET'
    }, function(error, response, body){
        
