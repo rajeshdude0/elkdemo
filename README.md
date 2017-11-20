@@ -1,4 +1,4 @@
-# ELK - Demo
+# ELK - Demo ![Badge](https://img.shields.io/badge/apptype-demo-brightgreen.svg) ![Badge](https://img.shields.io/badge/tech-ELK%20--%20Stack-blue.svg)
 ![ELK - Stack ](https://logz.io/wp-content/uploads/2017/03/elk-pipeline-in-docker-environment.png)
 ## What's this ?
 <p>This is a simple ELK Stack Demo App, it generates data based on the mouse movement done in the browser window.</p>
