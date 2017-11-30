@@ -21,6 +21,7 @@ npm install elk-demo
 
 ```
 var elkdemo = require('elk-demo');
+
 elkdemo.start(3000);
 ```
 ##### Run by specifying IP 
@@ -33,5 +34,5 @@ elkdemo.start(3000, function(){
    
    //do stuff here.
    
-   });
+});
 ```
