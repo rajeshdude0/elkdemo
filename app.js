@@ -54,8 +54,22 @@ router.get('/getlogmetrics', function(req, res){
 
 
 var server = http.createServer(app);
-server.listen(process.env.PORT || 3000, function(){
-     var host = server.address().address;
-     var port = server.address().port;
-     console.log('Server listening at http://'+host+':'+port);
-});
+
+    
+
+module.exports = {
+    start: function(port, ip , callback){
+        if(arguments.length > 1){
+            server.listen(port,ip, resCallBack);
+        } else {
+            server.listen(port, resCallBack);
+        }
+
+        var resCallBack = function(){
+            var host = server.address().address;
+            var port = server.address().port;
+            console.log('Server listening at http://'+host+':'+port);
+           };
+        }
+    
+}

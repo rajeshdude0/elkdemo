@@ -2,7 +2,7 @@
   "name": "elk-demo",
   "version": "1.0.0",
   "description": "A small demo app for ELK stack",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
