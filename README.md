@@ -15,6 +15,23 @@
 <p>This app runs with single instance of Logstash and Kibana. So, even if you haven't move the mouse yet you see Logstash transfers (IN and OUT) changing, it's probably because someone else is moving mouse in his/her browser.</p>
 
 ## Install and Run
-1. ```npm install```
+```
+npm install elk-demo
+```
 
-1. ```npm start ```
+```
+var elkdemo = require('elk-demo');
+elkdemo.start(3000);
+```
+##### Run by specifying IP 
+```
+elkdemo.start(3000,'127.0.0.1');
+```
+##### Add a callback
+```
+elkdemo.start(3000, function(){
+   
+   //do stuff here.
+   
+   });
+```
